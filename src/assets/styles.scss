@@ -1,0 +1,21 @@
+@import 'common-styles.scss';
+
+body {
+    font-family: $font-family;
+}
+
+button {
+    padding: 4px 8px;
+    margin: 2px 4px;
+    background-color: rgb(66, 76, 214);
+    border: none;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button[disabled] {
+    opacity: .6;
+}

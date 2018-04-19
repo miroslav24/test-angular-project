@@ -1,0 +1,22 @@
+<h4>Person detail</h4>
+
+<form [formGroup]="personForm" novalidate (ngSubmit)="savePerson()">
+
+  <label for="person-name">Person name</label>
+  <input id="person-name" type="text" formControlName="name" />
+  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-message">Invalid value</div>
+
+  <label for="person-gender">Person gender</label>
+  <select id="person-gender" formControlName="gender">
+    <option value="{{null}}"></option>
+    <option *ngFor="let gender of genders" [value]="gender">
+      {{gender | displayGender}}
+    </option>
+  </select>
+  <div *ngIf="gender.invalid && (gender.dirty || gender.touched)" class="error-message">Invalid value</div>
+
+  <div class="buttons">
+    <button type="submit" [disabled]="!personForm.valid || !personForm.touched">Save</button>
+    <button [routerLink]="['/']">Back</button>
+  </div>
+</form>

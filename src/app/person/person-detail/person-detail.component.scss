@@ -1,0 +1,13 @@
+@import '../../../assets/common-styles.scss';
+
+label, input, select {
+    display: block;
+}
+
+label {
+    margin-top: 1%;
+}
+
+.error-message {
+    color: $error-color;
+}

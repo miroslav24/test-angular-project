@@ -1,0 +1,20 @@
+<button [routerLink]="['/detail']">Add person</button>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Gender</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of persons | async">
+      <td>{{person.name}}</td>
+      <td>{{person.gender | displayGender}}</td>
+      <td>
+        <button [routerLink]="['/detail/' + person.id]">Edit</button>
+        <button (click)="deletePerson(person)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

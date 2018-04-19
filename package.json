@@ -1,0 +1,41 @@
+{
+  "name": "Angular-App",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "cleanup-compiled": "rimraf src/app/**/*.ngfactory.ts src/app/**/*.ngstyle.ts src/app/**/*.ngsummary.json",
+    "cleanup-total": "rimraf src/app/**/*.ngfactory.ts src/app/**/*.ngstyle.ts src/app/**/*.ngsummary.json dist",
+    "ng": "ng",
+    "start": "npm run cleanup-compiled && ng serve --open --host 0.0.0.0 --disable-host-check --base-href /",
+    "build-prod": "npm run cleanup-total && ng build --prod --aot --base-href /",
+    "lint": "ng lint"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~5.2.9",
+    "@angular/common": "~5.2.9",
+    "@angular/compiler": "~5.2.9",
+    "@angular/compiler-cli": "~5.2.9",
+    "@angular/core": "~5.2.9",
+    "@angular/forms": "~5.2.9",
+    "@angular/platform-browser": "~5.2.9",
+    "@angular/platform-browser-dynamic": "~5.2.9",
+    "@angular/platform-server": "~5.2.9",
+    "@angular/router": "~5.2.9",
+    "angular2-logger": "^0.7.0",
+    "core-js": "^2.4.1",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "rxjs": "^5.5.0",
+    "web-animations-js": "^2.3.1",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.6.5",
+    "@types/node": "~6.0.60",
+    "codelyzer": "~4.2.1",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.0.0",
+    "typescript": "2.4.2"
+  }
+}

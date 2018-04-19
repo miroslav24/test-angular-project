@@ -1,0 +1,21 @@
+
+table {
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 6px;
+}
+
+table thead {
+    font-weight: bold;
+    background-color: #88b0c7;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: #6ec1f1;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #93c3e2;
+}
